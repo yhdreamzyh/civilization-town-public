@@ -11,7 +11,7 @@ config.toml
 *.pem
 *.key
 
-# Binaries should be uploaded to GitHub Releases, not committed.
+# Runtime binaries are kept in bin/ for convenience; packaged downloads still ship through GitHub Releases.
 *.exe
 *.dll
 *.dylib
@@ -20,6 +20,9 @@ civilization-town-core*
 bin/*
 !bin/.gitkeep
 !bin/checksums.txt
+!bin/civilization-town-core-linux-x64
+!bin/civilization-town-core-windows-x64.exe
+!bin/libunwind.dll
 
 # Python
 __pycache__/

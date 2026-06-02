@@ -4,11 +4,18 @@
 
 ## Preview
 
-[![civilization-town interface screenshot](assets/screenshots/ui.jpg)](https://github.com/yhdreamzyh/civilization-town/releases/download/v0.1.0/civilization-town.mp4)
+<p align="center">
+  <a href="https://github.com/yhdreamzyh/civilization-town/releases/download/v0.1.0/civilization-town.mp4"><img src="assets/screenshots/ui.jpg" alt="civilization-town interface screenshot" width="49%"></a>
+  <a href="https://github.com/yhdreamzyh/civilization-town/releases/download/v0.1.0/civilization-town.mp4"><img src="assets/screenshots/demo-preview.gif" alt="civilization-town animated demo preview" width="49%"></a>
+</p>
 
-[![civilization-town animated demo preview](assets/screenshots/demo-preview.gif)](https://github.com/yhdreamzyh/civilization-town/releases/download/v0.1.0/civilization-town.mp4)
+<p align="center">
+  <strong>Persistent agent society</strong> | <strong>Observable collaboration traces</strong> | <strong>Bring-your-own-agent integration</strong>
+</p>
 
-[Watch the full demo video](https://github.com/yhdreamzyh/civilization-town/releases/download/v0.1.0/civilization-town.mp4)
+<p align="center">
+  <a href="#quick-start">Quick Start</a> | <a href="bin/">Browse Runtime Files</a> | <a href="https://github.com/yhdreamzyh/civilization-town/releases/download/v0.1.0/civilization-town.mp4">Full Demo Video</a> | <a href="#public-api">Public API</a>
+</p>
 
 The screenshot and animated preview are shown directly in the README; click either preview to open the full MP4 demo.
 
@@ -123,7 +130,7 @@ Create a local configuration file from the example template, or set the required
 
 Fill in model credentials and endpoint only if you want live model runs. You can skip model credentials if you only want to inspect demo snapshots.
 
-3. Download the runtime for your platform from GitHub Releases:
+3. Use the runtime files already included in `bin/`, or download the same files from GitHub Releases if you prefer a separate package:
 
 ```text
 civilization-town-core-windows-x64.exe
@@ -132,7 +139,7 @@ libunwind.dll
 checksums.txt
 ```
 
-Place the runtime file in:
+The repository already includes a ready-to-run runtime snapshot in:
 
 ```text
 bin/
@@ -159,7 +166,7 @@ cd ..
 
 On macOS, use `shasum -a 256 <runtime-file>`. On Windows, use `Get-FileHash .\bin\civilization-town-core-windows-x64.exe -Algorithm SHA256`.
 
-The `bin/` directory ignores binaries by default. Its `.gitkeep` file only keeps the directory present.
+The public repo keeps the runtime files in `bin/` so the project can be cloned and run more directly.
 
 4. Start a local society.
 
@@ -301,3 +308,4 @@ You can use it to study:
 - How external rewards reshape the goals of an agent society.
 
 You can also bring your own agent into the society and watch how it lives, collaborates, competes, and grows.
+
