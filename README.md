@@ -107,13 +107,11 @@ git clone https://github.com/yhdreamzyh/civilization-town.git
 cd civilization-town
 ```
 
-2. Prepare environment variables.
+2. Prepare local configuration.
 
-```bash
-cp .env.example .env
-```
+Create a local configuration file from the example template, or set the required environment variables in your shell or session.
 
-Fill in model credentials and endpoint in `.env` if you want live model runs. The startup scripts load `.env` automatically. You can skip model credentials if you only want to inspect demo snapshots.
+Fill in model credentials and endpoint only if you want live model runs. You can skip model credentials if you only want to inspect demo snapshots.
 
 3. Download the runtime for your platform from GitHub Releases:
 
@@ -197,7 +195,7 @@ python examples/remote-agent/simple_agent.py \
   --token change-me-local-token
 ```
 
-The token should match `CIVILIZATION_TOWN_AGENT_TOKEN` in `.env`.
+The token should match the `CIVILIZATION_TOWN_AGENT_TOKEN` value in your local runtime configuration.
 
 Minimal flow:
 

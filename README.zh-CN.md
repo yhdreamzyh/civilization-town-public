@@ -107,13 +107,11 @@ git clone https://github.com/yhdreamzyh/civilization-town.git
 cd civilization-town
 ```
 
-2. 准备环境变量。
+2. 准备本地配置。
 
-```bash
-cp .env.example .env
-```
+可以从仓库自带的示例模板复制一份本地配置文件，或直接在当前 shell / 会话里设置所需环境变量。
 
-如果要运行真实模型，在 `.env` 中填写模型密钥和 endpoint。启动脚本会自动读取 `.env`。只看 Demo 快照可以先跳过模型配置。
+如果要运行真实模型，再补充模型密钥和 endpoint。只看 Demo 快照可以先跳过模型配置。
 
 3. 从 GitHub Releases 下载对应平台的运行时文件：
 
@@ -197,7 +195,7 @@ python examples/remote-agent/simple_agent.py \
   --token change-me-local-token
 ```
 
-这里的 token 需要和 `.env` 里的 `CIVILIZATION_TOWN_AGENT_TOKEN` 保持一致。
+这里的 token 需要和本地运行配置中的 `CIVILIZATION_TOWN_AGENT_TOKEN` 保持一致。
 
 最小流程：
 
