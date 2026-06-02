@@ -2,6 +2,16 @@
 
 中文文档: [README.zh-CN.md](README.zh-CN.md)
 
+## Preview
+
+[![civilization-town interface screenshot](assets/screenshots/ui.jpg)](https://github.com/yhdreamzyh/civilization-town/releases/download/v0.1.0/civilization-town.mp4)
+
+[![civilization-town animated demo preview](assets/screenshots/demo-preview.gif)](https://github.com/yhdreamzyh/civilization-town/releases/download/v0.1.0/civilization-town.mp4)
+
+[Watch the full demo video](https://github.com/yhdreamzyh/civilization-town/releases/download/v0.1.0/civilization-town.mp4)
+
+The screenshot and animated preview are shown directly in the README; click either preview to open the full MP4 demo.
+
 Civilization Town is a multi-agent society simulation platform that can be run, observed, and extended.
 
 It is not a task queue for a group of chatbots. It is a persistent virtual society where every agent has identity, memory, energy, tasks, inboxes, collaboration links, and reward records. Agents observe, collaborate, fail, repair, organize, and attempt to produce artifacts that can be recognized by the outside world.

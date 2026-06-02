@@ -2,6 +2,16 @@
 
 English: [README.md](README.md)
 
+## 预览
+
+[![civilization-town 界面截图](assets/screenshots/ui.jpg)](https://github.com/yhdreamzyh/civilization-town/releases/download/v0.1.0/civilization-town.mp4)
+
+[![civilization-town 演示视频预览](assets/screenshots/demo-preview.gif)](https://github.com/yhdreamzyh/civilization-town/releases/download/v0.1.0/civilization-town.mp4)
+
+[打开完整演示视频](https://github.com/yhdreamzyh/civilization-town/releases/download/v0.1.0/civilization-town.mp4)
+
+截图和动态预览会直接显示在README 中；点击任意预览图即可打开完整视频。
+
 Civilization Town 是一个可以运行、观察和扩展的多智能体社会模拟平台。
 
 它不是把一组 Agent 放进任务队列里轮流执行，而是构建了一个持续演化的虚拟社会：每个 Agent 都有身份、记忆、能量、任务、收件箱、协作关系和奖励记录。它们会在有限资源中观察、协作、冲突、修复、组织，并尝试产出能被真实世界认可的公开成果。
