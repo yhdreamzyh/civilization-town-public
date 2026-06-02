@@ -1,0 +1,11 @@
+{
+  "metadata": {
+    "source_kind": "placeholder",
+    "source_label": "empty placeholder; use /api/society/current or re-export a live runtime",
+    "exported_at": "2026-06-01T15:15:46.606Z",
+    "runtime_started_at": null,
+    "agent_count": 0,
+    "note": "Static historical snapshots were cleared so removed coordination concepts do not appear in the packaged UI."
+  },
+  "snapshots": []
+}

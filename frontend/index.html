@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>小镇模拟器</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='13' fill='%230e8a82'/%3E%3Ccircle cx='16' cy='16' r='5' fill='white'/%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="top-band" aria-label="世界概览">
+        <article class="story-panel hero-panel" aria-labelledby="mainlineTitle">
+          <div class="panel-kicker">旅程</div>
+          <h1 id="mainlineTitle">小镇纪元</h1>
+          <p id="mainlineText"></p>
+        </article>
+
+        <section class="session-panel" aria-labelledby="sessionTitle">
+          <div class="session-head">
+            <div>
+              <div class="panel-kicker">守望</div>
+              <h2 id="sessionTitle">系统运行</h2>
+            </div>
+            <button id="autoFocus" class="icon-button is-active" title="自动聚焦" aria-label="自动聚焦">◉</button>
+          </div>
+          <div class="watch-clock">
+            <span id="watchElapsed">00:00</span>
+            <span id="watchTarget">自系统启动</span>
+          </div>
+          <div id="pulseMeters" class="pulse-grid"></div>
+        </section>
+
+        <section class="facts-panel" aria-labelledby="factsTitle">
+          <div class="panel-kicker">资源</div>
+          <h2 id="factsTitle">营地库存</h2>
+          <div id="worldStats" class="stat-grid"></div>
+        </section>
+      </section>
+
+      <section class="workspace-grid">
+        <section class="map-panel" aria-label="定居点地图">
+          <div class="map-toolbar">
+          <div>
+            <div class="panel-kicker">地图</div>
+            <h2 id="mapTitle">定居点</h2>
+          </div>
+            <div class="map-controls">
+            <span id="dataSourceBadge" class="source-badge">示例数据</span>
+            <label class="control-field">
+              <span>同盟线</span>
+              <input id="edgeThreshold" type="range" min="0.5" max="0.98" step="0.01" />
+            </label>
+              <label class="toggle-field">
+                <input id="showEdges" type="checkbox" checked />
+                <span>显示纽带</span>
+              </label>
+              <button id="fitMap" class="icon-button" title="重置视野" aria-label="重置视野">⟳</button>
+              <button id="resetSociety" class="icon-button" title="重置社会" aria-label="重置社会">↺</button>
+            </div>
+          </div>
+          <div class="canvas-wrap">
+            <canvas id="societyMap"></canvas>
+            <div id="agentTooltip" class="agent-tooltip" role="tooltip" hidden></div>
+          </div>
+        </section>
+
+        <aside class="detail-panel" aria-labelledby="detailTitle">
+          <div class="detail-header">
+            <div>
+              <div class="panel-kicker" id="detailKicker">居民</div>
+              <h2 id="detailTitle">未选择居民</h2>
+            </div>
+            <button id="clearSelection" class="icon-button" title="清除选择" aria-label="清除选择">×</button>
+          </div>
+          <div id="detailContent" class="detail-content"></div>
+        </aside>
+
+        <aside class="live-panel" aria-labelledby="liveTitle">
+          <div class="live-header">
+            <div>
+              <div class="panel-kicker">任务板</div>
+              <h2 id="liveTitle">冒险日志</h2>
+            </div>
+            <span id="liveHeat" class="heat-badge">0</span>
+          </div>
+          <div id="spotlightCard" class="spotlight-card"></div>
+          <section class="live-section" aria-labelledby="watchQueueTitle">
+            <h3 id="watchQueueTitle">行动队列</h3>
+            <div id="watchQueue" class="watch-queue"></div>
+          </section>
+          <section class="live-section" aria-labelledby="liveFeedTitle">
+            <h3 id="liveFeedTitle">城镇传闻</h3>
+            <div id="liveFeed" class="live-feed"></div>
+          </section>
+        </aside>
+      </section>
+
+      <section class="timeline-band" aria-label="编年史">
+        <div class="timeline-main">
+          <div class="timeline-labels">
+            <div>
+              <div class="panel-kicker">编年史</div>
+              <h2 id="timelineStep">第 0 刻</h2>
+            </div>
+            <div id="timelineMeta" class="timeline-meta"></div>
+          </div>
+          <input id="timelineRange" class="timeline-range" type="range" min="0" max="0" step="1" value="0" />
+          <div id="keyEvents" class="event-strip"></div>
+        </div>
+
+        <article class="summary-panel" aria-labelledby="summaryTitle">
+          <div class="summary-header">
+            <div>
+              <div class="panel-kicker">章节</div>
+              <h2 id="summaryTitle">城镇记录</h2>
+            </div>
+            <button id="openSummary" class="text-button">打开卷轴</button>
+          </div>
+          <p id="summaryExcerpt"></p>
+        </article>
+      </section>
+    </main>
+
+    <dialog id="summaryDialog" class="summary-dialog">
+      <div class="dialog-header">
+        <div>
+          <div class="panel-kicker">章节</div>
+          <h2 id="summaryDialogTitle">城镇记录</h2>
+        </div>
+        <button id="closeSummary" class="icon-button" title="关闭" aria-label="关闭">×</button>
+      </div>
+      <div id="summaryDialogBody" class="summary-dialog-body"></div>
+    </dialog>
+
+    <script src="./app.js" type="module"></script>
+  </body>
+</html>

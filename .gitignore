@@ -1,0 +1,36 @@
+# Local runtime state
+.pingcode/
+workspace/
+*.lock
+*.tmp
+
+# Secrets
+.env
+auth.json
+config.toml
+*.pem
+*.key
+
+# Binaries should be uploaded to GitHub Releases, not committed.
+*.exe
+*.dll
+*.dylib
+*.so
+civilization-town-core*
+bin/*
+!bin/.gitkeep
+!bin/checksums.txt
+
+# Python
+__pycache__/
+*.pyc
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Large media is published through GitHub Releases.
+assets/videos/*.mp4
+!assets/videos/.gitkeep
